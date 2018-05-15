@@ -1,0 +1,15 @@
+<h1>Search for a Movie</h1>
+<form method="GET" action="/results">
+  <input type="text" name="search" placeholder="search a movie">
+  <button>Submit</button>
+</form>
+
+<h1>Search results</h1>
+<ul>
+  <% data['Search'].forEach((movie) => { %>
+    <li>
+      <strong><%= movie.Title;%></strong> -
+        <em><%= movie.Year;%></em>
+    </li>
+    <% }) %>
+</ul>
